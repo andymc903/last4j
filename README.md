@@ -1,5 +1,7 @@
 last4j
 ======
+###### A better Last.fm java client
+
 
 last4j is intended to be a better last.fm java client.
 
