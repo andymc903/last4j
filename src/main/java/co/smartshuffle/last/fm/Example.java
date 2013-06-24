@@ -18,7 +18,7 @@ public class Example {
      * @param args
      */
     public static void main(String[] args) {
-        ApiKey myApi = new DefaultApiKey("63d6d1ad32141af7b9d494e38876eb40", "59a8718095e51b82fcfcd62b352264cc");
+        ApiKey myApi = new DefaultApiKey("your api key", "your secret key");
         ArtistAPI artistClient = new ArtistApiClient(myApi);        
         List<TopTrack> trackList = artistClient.getTopTracks("Brand new");
         System.out.print(trackList);
