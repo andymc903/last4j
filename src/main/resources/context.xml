@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    
+    <bean id="httpClient" class="org.apache.http.impl.client.DefaultHttpClient">
+        <constructor-arg>
+            <bean class="org.apache.http.impl.conn.PoolingClientConnectionManager"/>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <constructor-arg>
+            <bean class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory">
+                <constructor-arg ref="httpClient"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+</beans>
