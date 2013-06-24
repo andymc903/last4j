@@ -3,15 +3,23 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>co.smartshuffle</groupId>
 	<artifactId>last4j</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-ALPHA</version>
 	<name>last4j</name>
 	<url>https://github.com/andymc903/last4j</url>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/andymc903/last4j.git</url>
+	</scm>
+
 	<dependencies>
-		<dependency>
-			<groupId>de.u-mass</groupId>
-			<artifactId>lastfm-java</artifactId>
-			<version>0.1.2</version>
-		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
@@ -135,33 +143,12 @@
 		<finalName>last4j</finalName>
 		<outputDirectory>target/classes</outputDirectory>
 		<testOutputDirectory>target/test-classes</testOutputDirectory>
-		<extensions>
-			<extension>
-				<groupId>org.springframework.build.aws</groupId>
-				<artifactId>org.springframework.build.aws.maven</artifactId>
-				<version>3.0.0.RELEASE</version>
-			</extension>
-		</extensions>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.12</version>
-				<configuration>
-					<forkMode>always</forkMode>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
-			</plugin>
-		</plugins>
 	</build>
-	
+
 
 	<issueManagement>
 		<url>https://github.com/andymc903/last4j/issues</url>
 	</issueManagement>
 	<description>A last.fm java client</description>
+	
 </project>
